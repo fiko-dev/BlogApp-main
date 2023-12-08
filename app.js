@@ -46,6 +46,9 @@ const blog_db_url =
 	blogDB +
 	'?retryWrites=true&w=majority';
 
+console.log(blog_db_url);	
+
+//connect to MongoDB database
 const dbConnection = mongoose.connect(blog_db_url, (err) => {
   if(err){
     console.log(err)
@@ -95,8 +98,13 @@ app.all('*', function(req, res) {
   res.redirect("/post/about");
 });
 
+/*
 app.listen(port,() => {
 console.log('Listening ...Server started on port ' + port);
 })
+*/
+const server = http.createServer(app.listen(port,() => { 
+console.log('Listening ...Server started on port ' + port);
+}))
 
 module.exports = app;

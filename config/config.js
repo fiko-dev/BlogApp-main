@@ -46,7 +46,8 @@ var config = convict({
     },
     db_url: {
       format: '*',
-      default: 'http://localhost:27017/',
+      //default: 'http://localhost:27017/',
+      default: 'mongodb://127.0.0.1:27017/',
       env: 'DB_URL'
     },
     password: {
