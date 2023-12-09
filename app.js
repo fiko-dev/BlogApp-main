@@ -3,7 +3,8 @@ const express = require('express');
 const config = require('./config/config');
 const compression = require ('compression');
 const helmet = require('helmet');
-const http= require("http"); //modified from "HTTPS"
+//const http= require("http"); //modified from "HTTPS"
+const https= require("https");
 const fs = require('fs')
 
 
@@ -98,13 +99,27 @@ app.all('*', function(req, res) {
   res.redirect("/post/about");
 });
 
-/*
+/* Original code
 app.listen(port,() => {
 console.log('Listening ...Server started on port ' + port);
 })
 */
+
+/* Tarek's fix
 const server = http.createServer(app.listen(port,() => { 
 console.log('Listening ...Server started on port ' + port);
 }))
+*/
+
+const options = {
+	key: fs.readFileSync('./private-key.pem'),
+	cert: fs.readFileSync('./certificate.pem')
+  };
+const server = https.createServer(options,app);
+
+server.listen(port, () => {
+	console.log(`Server running on port ` + port);
+  });
+
 
 module.exports = app;
