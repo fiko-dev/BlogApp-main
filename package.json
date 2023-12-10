@@ -1,6 +1,6 @@
 {
   "name": "blogdb",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A blog with mongodb",
   "main": "app.js",
   "scripts": {
@@ -8,7 +8,7 @@
     "prestart": "node generateCert.js",
     "start": "node app.js"
   },
-  "author": "Tarek Idriss",
+  "author": "Thomas Ng",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/tarek.idriss/blog.git"
+    "url": "git+https://github.com/fiko-dev/BlogApp-main.git"
   },
   "engines": {
     "node": "*"
@@ -46,9 +46,9 @@
     "mongoose"
   ],
   "bugs": {
-    "url": "https://gitlab.com/tarek.idriss/blog/issues"
+    "url": "https://gitlab.com/fiko-dev/BlogApp-main/issues"
   },
-  "homepage": "https://gitlab.com/tarek.idriss/blog#readme",
+  "homepage": "https://gitlab.com/fiko-dev/BlogApp-main#readme",
   "devDependencies": {
     "chai": "^4.3.6",
     "mocha": "^9.2.1",
