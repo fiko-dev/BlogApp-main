@@ -4,6 +4,7 @@
   "description": "A blog with mongodb",
   "main": "app.js",
   "scripts": {
+    "pretest": "node generateCert.js",
     "test": "node_modules/mocha/bin/mocha ./tests --exit",
     "prestart": "node generateCert.js",
     "start": "node app.js"
