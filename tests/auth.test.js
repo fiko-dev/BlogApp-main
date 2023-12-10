@@ -5,11 +5,10 @@ const config = require('../config/config');
 
 //set up the data we need to pass to the login method
 const userCredentials = {
-    email: config.get('test_username'), 
-    password: config.get('test_password')
+    email: `ngt@wwu.edu`,//config.get('test_username'), 
+    password: `Password1`//config.get('test_password')
   }
-  console.log(userCredentials.email);
-  console.log(userCredentials.password);
+  
   //login the user before we run any tests
   var authenticatedUser = request.agent(app);
   before(function(done){
