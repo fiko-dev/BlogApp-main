@@ -7,15 +7,15 @@ npm i
 
 npm node-forge
 
-npm openssl (potentially not - looking into it)
+npm openssl
 
-npm mongodb (no longer any need to install mongodb ce locally)
+npm mongodb
 
 ```
 
 k3s (see demo - downloaded)
 
-**run node generateCert.js to generate certificates before running npm start**
+**__run node generateCert.js to generate certificates before running - this should be handled through package.json by simply doing npm start__**
 
 12/7: Completed Task 2: Dockerizing (image pushed under fikofoxx/private-repo)
 
