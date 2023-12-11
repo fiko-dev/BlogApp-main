@@ -41,12 +41,19 @@ const port = config.get('port') || 3000;
 const blogDB = config.get('db.name')
 
 const blog_db_url = `mongodb+srv://fikofoxx:Password1@cluster0.hhuyhz5.mongodb.net/?retryWrites=true&w=majority`;
-/*
+/*const blog_db_url2 =
+
 	config.get('db.db_url') +
 	config.get('db.password') +
 	config.get('db.host') +
 	blogDB +
 	'?retryWrites=true&w=majority';
+
+console.log(blog_db_url2);
+console.log(config.get(`db.db_url`));
+console.log(config.get(`db.password`));
+console.log(config.get(`db.host`));
+console.log(blogDB);
 */
 console.log(blog_db_url);	
 
