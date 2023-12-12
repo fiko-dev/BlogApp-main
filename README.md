@@ -58,3 +58,5 @@ Most recent Docker image publicly accessible as "fikofoxx/private-repo:latest"
 # Video:
 
 https://youtu.be/X9RQnm9jR1c
+
+There may be some things I left out of the video, but they should otherwise be contained on this README doc.
