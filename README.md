@@ -53,4 +53,8 @@ Most recent Docker image publicly accessible as "fikofoxx/private-repo:latest"
 
 - I learned that there was a GitHub workflow implemented in the program that automatically updates/generates a dockerfile. I tried to update the relevant files to have it work, but I couldn't get the workflow to run properly. So for now, it constantly fails because GitHub tries to run `npm test` but can't access the webserver that was created, even though the test function works perfectly fine when run on the EC2 instance.
 
+- **Database Issues**: Current implementation means that if you try and post more than one blog post per account, the site will crash, because the database starts crying about the primary key (a user's username) being the same as a previous blog post, so the data can't be entered. Additionally, registration considers a user's email to be the unique component, not the username. When registration fails, no message pops up, and the site will not redirect the user off of the redirect page to tell them that registration failed for some reason.
+
 # Video:
+
+https://youtu.be/X9RQnm9jR1c
